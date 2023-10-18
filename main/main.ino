@@ -22,7 +22,7 @@ void setup() {
 void loop() {
   button_state = digitalRead(bp1);
   valpot = analogRead(brochepot);
-  conversion = map(valpot, 0, 180, 0, 1023);
+  conversion = map(valpot, 0, 1024, 0, 180);
 
   lcd.setCursor(0, 1);
   if (button_state == 1) {
