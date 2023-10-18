@@ -22,7 +22,7 @@ void setup() {
 void loop() {
   button_state = digitalRead(bp1);
   valpot = analogRead(brochepot);
-  conversion = map(valpot, 0, 100, 0, 1023);
+  conversion = map(valpot, 0, 180, 0, 1023);
 
   lcd.setCursor(0, 1);
   if (button_state == 1) {
@@ -32,6 +32,5 @@ void loop() {
   }
 
   lcd.setCursor(0, 2);
-  lcd.print("Potentiometre        ");
   lcd.print("Potentiometre " + String(conversion));
 }
