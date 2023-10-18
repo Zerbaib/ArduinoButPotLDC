@@ -32,5 +32,6 @@ void loop() {
   }
 
   lcd.setCursor(0, 2);
+  lcd.print("Potentiometre        ");
   lcd.print("Potentiometre " + String(conversion));
 }
